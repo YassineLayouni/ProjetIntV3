@@ -1,0 +1,34 @@
+#MainContainer{
+    display : flex;
+    flex-direction: column;  
+    margin-left : 15vw;
+    font-size: 1vw;
+    width : 85vw;
+    height: 90vh;
+    padding: 3vw;
+}
+#background{
+    width : 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-color:rgb(240, 230, 209);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scaleX(-1);
+  }
+
+h1{
+    margin-bottom: 2vw;
+}
+#titre{
+    margin-left: 1vw;
+    font-weight: 600;
+    width : 40vw;
+}
+button {
+    margin : 1vh;
+}
+input{
+    margin-left: 1vw;
+}

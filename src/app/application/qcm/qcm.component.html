@@ -1,0 +1,25 @@
+<app-homeens></app-homeens>
+
+<div id="MainContainer">
+    <div id="q">
+        <div id="qcm">
+            <div id="titre">
+                {{qcm.nom}}</div>
+         
+        </div>
+    </div>
+    <div id="com">
+        <div id="question" *ngFor="let q of qcm.questions; let i = index">
+           question: {{i+1}}<br>{{q.question }}<br>
+           reponse:<br>{{q.reponse}}<br>
+           propositions:<br>
+           {{q.a}}<br>
+           {{q.b}}<br>
+           {{q.c}}<br>
+
+
+
+        </div>
+    </div>
+    <button id="return"  type="button" class="btn btn-danger" [routerLink]="['/QCMens']">Retourner</button>
+</div>

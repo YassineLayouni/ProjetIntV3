@@ -1,0 +1,31 @@
+<div id="background"></div>
+<app-homeetud></app-homeetud>
+<div id="MainContainer">
+    <ng-container *ngFor="let i of instituts, let ix=index">
+         <div id="document" (click)="onclickInstitut()">
+            <div class="dropdown">
+                <div class="dropdown-toggle" id="institut">{{i.institut}}</div>
+            </div>
+        </div>
+
+        <ng-container *ngFor="let b of i.branches,let bx=index">
+            <div id="document" style="margin-left: 12vw;" (click)="onclickBranche()" *ngIf="branche==true">
+                <div class="dropdown-toggle" id="branche">{{b.branche}}</div>
+            </div>
+        
+    
+        <ng-container *ngFor="let m of i.branches[bx].matieres,let mx = index">
+            <div id="document" style="margin-left: 14vw;" *ngIf="matiere==true" (click)="onclickMatiere()">
+                <div class="dropdown-toggle" id="matiere">{{m.matiere}}</div>
+            </div>
+
+    
+        <ng-container *ngFor="let n of i.branches[bx].matieres[mx].noms">
+                    <div id="document" style="margin-left: 16vw;" *ngIf="nomm==true">
+                        <a style="color : black" [href]="n.lien"  target="_blank"><div id="nom">{{n.nom}}</div></a>
+                    </div>
+        </ng-container>
+        </ng-container>
+        </ng-container>
+</ng-container>
+</div>
